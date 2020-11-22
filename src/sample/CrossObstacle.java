@@ -6,6 +6,7 @@ import javafx.animation.RotateTransition;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.StrokeLineCap;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -55,6 +56,7 @@ class CrossObstacle{
             bline.setEndY(y_center);
             bline.setStrokeWidth(15);
             bline.setStroke(Color.BLUE);
+            bline.setStrokeLineCap(StrokeLineCap.ROUND);
 
             Line yline = new Line();
 
@@ -65,6 +67,7 @@ class CrossObstacle{
             yline.setEndY(y_center-100);
             yline.setStrokeWidth(15);
             yline.setStroke(Color.YELLOW);
+            yline.setStrokeLineCap(StrokeLineCap.ROUND);
 
             Line pline = new Line();
 
@@ -75,7 +78,7 @@ class CrossObstacle{
             pline.setEndY(y_center);
             pline.setStrokeWidth(15);
             pline.setStroke(Color.PURPLE);
-
+            pline.setStrokeLineCap(StrokeLineCap.ROUND);
             Line rline = new Line();
 
 //Setting the properties to a line
@@ -85,7 +88,7 @@ class CrossObstacle{
             rline.setEndY(y_center+100);
             rline.setStrokeWidth(15);
             rline.setStroke(Color.MEDIUMVIOLETRED);
-
+            rline.setStrokeLineCap(StrokeLineCap.ROUND);
 
             //Creating a Group
             root = new Group(bline,yline,pline,rline);

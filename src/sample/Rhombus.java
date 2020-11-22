@@ -7,6 +7,7 @@ import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.StrokeLineCap;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -75,7 +76,7 @@ private Group root;
         l1.setEndX(x_center);
         l1.setEndY(y_center+length);
         l1.setRotate(0);
-
+        l1.setStrokeLineCap(StrokeLineCap.ROUND);
 
 
         Line l3 = new Line();
@@ -86,6 +87,7 @@ private Group root;
         l3.setEndX(x_center+length);
         l3.setEndY(y_center);
         l3.setRotate(0);
+        l3.setStrokeLineCap(StrokeLineCap.ROUND);
 
         Line l2 = new Line();
         l2.setStroke(Color.MAGENTA);
@@ -95,6 +97,7 @@ private Group root;
         l2.setEndX(l1.getEndX()+length);
         l2.setEndY(l1.getEndY());
         l2.setRotate(0);
+        l2.setStrokeLineCap(StrokeLineCap.ROUND);
 
         Line l4= new Line();
         l4.setStroke(Color.PURPLE);
@@ -104,6 +107,7 @@ private Group root;
         l4.setEndX(l2.getEndX());
         l4.setEndY(l2.getEndY());
         l4.setRotate(0);
+        l4.setStrokeLineCap(StrokeLineCap.ROUND);
 
 
         root = new Group(l1,l3,l2,l4);

@@ -106,7 +106,7 @@ private Group root;
         l4.setRotate(0);
 
 
-         root = new Group(l1,l3,l2,l4);
+        root = new Group(l1,l3,l2,l4);
         RotateTransition rotate1 = new RotateTransition();
         rotate1.setAxis(Rotate.Z_AXIS);
         rotate1.setByAngle(360);

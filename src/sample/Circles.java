@@ -18,6 +18,15 @@ public class Circles extends Application {
     private double x_center, y_center;
     private double radius;
     private double speed;
+    private double angle;
+
+    public void setAngle(double angle) {
+        this.angle = angle;
+    }
+
+    public double getAngle() {
+        return angle;
+    }
 
     public void setRotateSpeed(double speed) {
         this.speed = speed;
@@ -61,10 +70,10 @@ public class Circles extends Application {
         arc1.setCenterY(y_center);
         arc1.setRadiusX(radius);
         arc1.setRadiusY(radius);
-        arc1.setStartAngle(1.57f);
+        arc1.setStartAngle(45);
         arc1.setLength(90.37167f);
         arc1.setType(ArcType.OPEN);
-        arc1.setFill(Color.DARKGRAY);
+        arc1.setFill(null);
         arc1.setStroke(Color.AQUAMARINE);
         arc1.setStrokeWidth(15);
 
@@ -75,10 +84,10 @@ public class Circles extends Application {
         arc2.setCenterY(y_center);
         arc2.setRadiusX(radius);
         arc2.setRadiusY(radius);
-        arc2.setStartAngle(90);
+        arc2.setStartAngle(135);
         arc2.setLength(90.37167f);
         arc2.setType(ArcType.OPEN);
-        arc2.setFill(Color.DARKGRAY);
+        arc2.setFill(null);
         arc2.setStroke(Color.MAGENTA);
         arc2.setStrokeWidth(15);
 
@@ -88,10 +97,10 @@ public class Circles extends Application {
         arc3.setCenterY(y_center);
         arc3.setRadiusX(radius);
         arc3.setRadiusY(radius);
-        arc3.setStartAngle(270);
+        arc3.setStartAngle(315);
         arc3.setLength(90.37167f);
         arc3.setType(ArcType.OPEN);
-        arc3.setFill(Color.DARKGRAY);
+        arc3.setFill(null);
         arc3.setStroke(Color.YELLOW);
         arc3.setStrokeWidth(15);
 
@@ -100,10 +109,10 @@ public class Circles extends Application {
         arc4.setCenterY(y_center);
         arc4.setRadiusX(radius);
         arc4.setRadiusY(radius);
-        arc4.setStartAngle(180);
+        arc4.setStartAngle(225);
         arc4.setLength(90.37167f);
         arc4.setType(ArcType.OPEN);
-        arc4.setFill(Color.DARKGRAY);
+        arc4.setFill(null);
         arc4.setStroke(Color.PURPLE);
         arc4.setStrokeWidth(15);
 
@@ -112,7 +121,7 @@ public class Circles extends Application {
         root = new Group(arc1,arc2,arc3,arc4);
         RotateTransition rotate1 = new RotateTransition();
         rotate1.setAxis(Rotate.Z_AXIS);
-        rotate1.setByAngle(360);
+        rotate1.setByAngle(angle);
         rotate1.setCycleCount(Animation.INDEFINITE);
         rotate1.setDuration(Duration.INDEFINITE);
         rotate1.setAutoReverse(false);

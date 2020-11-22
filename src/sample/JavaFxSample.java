@@ -27,13 +27,27 @@ public class JavaFxSample extends Application {
         r.setSpeed(0.2);
         r.start(primaryStage);
 
-        Group froot= new Group(c.getRoot(),r.getRoot());
+        Lines k =new Lines();
+        k.start(primaryStage);
 
-        Scene scene=new Scene(froot,600,600);
-        scene.setFill(Color.DARKGRAY);
-        primaryStage.setTitle("Ellipse");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        CrossObstacle cX = new CrossObstacle();
+
+        cX.setX_center(200);
+        cX.setY_center(150);
+        cX.setRotateSpeed(0.3);
+        cX.start(primaryStage);
+
+
+        Group froot= new Group( r.getRoot());
+            Scene scene=new Scene(froot,600,600);
+            scene.setFill(Color.DARKGRAY);
+            primaryStage.setTitle("Ellipse");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+
+
+//        Lines k = new Lines();
+
 
     }
 
